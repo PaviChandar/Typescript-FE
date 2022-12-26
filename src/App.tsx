@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ClassCounter from './components/ClassCounter';
+import ErrorBoundary from './components/ErrorBoundary';
+import FunctionalCounter from './components/FunctionalCounter';
+import HtmlProps from './components/HtmlProps';
+import PWCSample from './components/PWCSample';
+import PropsWithChild from './components/ReactFC';
+import RefsDemo from './components/RefsDemo';
+import UseFetch from './components/UseFetch';
+import UseLocalStorage from './components/UseLocalStorage';
+import UseMedia from './components/UseMedia';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PropsWithChild title="REACT.FC sample" children={<h4>hello world</h4>} />
+      <PWCSample heading='PROPSWITHCHILDREN sample' children="hi" />
+      <HtmlProps submit={true} children="button clicked" />
+      <ClassCounter />
+      <FunctionalCounter />
+      <ErrorBoundary />
+      <RefsDemo />
+      <UseLocalStorage />
+      <UseMedia />
+      <UseFetch />
     </div>
   );
 }
