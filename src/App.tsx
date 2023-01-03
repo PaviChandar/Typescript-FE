@@ -1,7 +1,10 @@
 import ClassCounter from './components/ClassCounter';
 import ConditionalRender from './components/CondtionalRender';
+import ContextMain from './components/ContextMain';
 import ErrorBoundary from './components/ErrorBoundary';
 import FunctionalCounter from './components/FunctionalCounter';
+import { HOCMain } from './components/HOCMain';
+import HOCSample from './components/HOCSample';
 import HtmlProps from './components/HtmlProps';
 import Person from './components/Person';
 import PWCSample from './components/PWCSample';
@@ -19,6 +22,8 @@ const App = () => {
     last: "Chandar"
   }
 
+  const HOCExample = HOCMain(HOCSample)
+
   return (
     <div className="App">
       <PropsWithChild title="REACT.FC sample" children={<h4>hello world</h4>} />
@@ -33,8 +38,9 @@ const App = () => {
       <UseFetch />
       <ConditionalRender name="Pavi" isLoggedIn={true} messageCount={5} />
       <Person name={personName} />
-      {/* <SetTimeOut /> */}y
-      
+      {/* <SetTimeOut /> */}
+      <HOCExample />
+      <ContextMain />
     </div>
   );
 }
