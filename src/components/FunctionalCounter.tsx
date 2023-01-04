@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react"
+import React, { useCallback, useState } from "react"
 
 const FunctionalCounter: React.FC<{}> = (): any => {
     const [count, setCount] = useState(0)
